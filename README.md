@@ -46,7 +46,7 @@ This repository contains the implementation of an Intrusion Detection System (ID
 3. **Evaluate the Model:**
    - Run the evaluation script:
      ```bash
-     python evaluate.py
+     python main.py
      ```
 4. **Deploy the IDS:**
    - Integrate the trained model into your autonomous vehicle system.
@@ -92,40 +92,36 @@ While the provided notebook combines all necessary components for a streamlined 
 **Suggested Repository Structure:**
 
 ```
-project_name/
+FL-ViT-IDS/
+├── clients/
+│   └── clients.py
 ├── data/
-│   ├── lisa_dataset/
-│   └── processed_data/
-├── models/
-│   ├── vision_transformer.py
-│   └── federated_learning.py
+│   └── data.py
+├── LISA/
+│   └── get_LISA.py
+├── VisionTransformer
+│   └── VisionTransformer.py
 ├── utils/
-│   ├── data_utils.py
-│   └── model_utils.py
+│   └── utils.py
 ├── scripts/
 │   ├── train.py
-│   └── evaluate.py
+│   └── main.py
 ├── requirements.txt
 ├── README.md
 ```
 
 **Explanation:**
 
-- **data:** Stores the dataset and preprocessed data.
-- **models:** Contains the model architectures (e.g., Vision Transformer).
+- **clients:** Defines functions related to managing the client-side operations in the federated learning process.
+- **data:** Handles data loading, preprocessing, and potentially defines transformations for the training and testing datasets.
+- **LISA:** Contains code for downloading and accessing the LISA dataset, a commonly used dataset for traffic sign recognition.
+- **VisionTranformer:** Defines the Vision Transformer model architecture and its components used for image classification.
 - **utils:** Contains utility functions for data loading, preprocessing, and evaluation.
-- **scripts:** Contains scripts for training, evaluation, and other tasks.
+- **scripts:** Contains scripts for training, evaluation, and main which serves as the entry point for the application.
 - **requirements.txt:** Lists the required packages.
 - **README.md:** Provides an overview of the project, instructions, and other relevant information.
 
 This structure promotes code organization, reusability, and easier collaboration.
-
-**Additional Notes:**
-
-* The `config.yaml` file contains customizable parameters for training, evaluation, and deployment.
-* The `utils` directory contains utility functions for data preprocessing, model evaluation, and visualization.
-* The `models` directory contains the implementation of the Vision Transformer and federated learning algorithms.
-* The `scripts` directory contains the main training and evaluation scripts.
 
 **Contributions:**
 We welcome contributions to this project, including bug fixes, feature enhancements, and new ideas. Please feel free to open issues or pull requests.
