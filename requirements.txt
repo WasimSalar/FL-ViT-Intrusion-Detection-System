@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+tensorflow
+torch
+torchvision
+logging
+Pillow
+tqdm
+matplotlib
+os
+json
